@@ -11,7 +11,7 @@ function Ticker() {
     // we need some way to get the prevPrice...
     // use the current value of the ref
     const prevPrice = prevPriceRef.current;
-    console.log("Before", prevPrice);
+    //console.log("Before", prevPrice);
     
     if (price > prevPrice) {
       setColor("green");
@@ -22,7 +22,7 @@ function Ticker() {
     }
     // set the new value of the ref (note: this doesn't trigger a re-render)
     prevPriceRef.current = price;
-    console.log("After", prevPriceRef.current);
+    //console.log("After", prevPriceRef.current);
     
   }, [price]);
   
